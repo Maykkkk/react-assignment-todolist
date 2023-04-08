@@ -37,7 +37,7 @@ const App = () => {
     setTodoList(newList);
   };
 
-//   const onEdit = (index) => {
+     const onEdit = (index) => {
 //     setEditingIndex(index);
 //     editForm.setFieldsValue(todoList[index]);
 //     setEditModalVisible(true);
