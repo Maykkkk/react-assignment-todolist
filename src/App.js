@@ -37,11 +37,11 @@ const App = () => {
     setTodoList(newList);
   };
 
-  const onEdit = (index) => {
-    setEditingIndex(index);
-    editForm.setFieldsValue(todoList[index]);
-    setEditModalVisible(true);
-  };
+//   const onEdit = (index) => {
+//     setEditingIndex(index);
+//     editForm.setFieldsValue(todoList[index]);
+//     setEditModalVisible(true);
+//   };
 
 //   const onSaveEdit = () => {
 //     editForm.validateFields().then((values) => {
