@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox, DatePicker, Select, Modal } from 'antd';
+import { Form, Input, Button, Checkbox, DatePicker, Select } from 'antd';
 import './App.css';
 
 const { TextArea } = Input;
@@ -9,7 +9,7 @@ const App = () => {
   const [todoList, setTodoList] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editForm] = Form.useForm();
-  const [editModalVisible, setEditModalVisible] = useState(false);
+  //const [editModalVisible, setEditModalVisible] = useState(false);
 
   const onFinish = (values) => {
     const newTask = {
@@ -43,22 +43,22 @@ const App = () => {
     setEditModalVisible(true);
   };
 
-  const onSaveEdit = () => {
-    editForm.validateFields().then((values) => {
-      const newList = [...todoList];
-      newList[editingIndex] = values;
-      setTodoList(newList);
-      setEditingIndex(null);
-      editForm.resetFields();
-      setEditModalVisible(false);
-    });
-  };
+//   const onSaveEdit = () => {
+//     editForm.validateFields().then((values) => {
+//       const newList = [...todoList];
+//       newList[editingIndex] = values;
+//       setTodoList(newList);
+//       setEditingIndex(null);
+//       editForm.resetFields();
+//       setEditModalVisible(false);
+//     });
+//   };
 
-  const onCancelEdit = () => {
-    setEditingIndex(null);
-    editForm.resetFields();
-    setEditModalVisible(false);
-  };
+//   const onCancelEdit = () => {
+//     setEditingIndex(null);
+//     editForm.resetFields();
+//     setEditModalVisible(false);
+//   };
 
   const renderTasks = () => {
     return todoList.map((todo, index) => {
